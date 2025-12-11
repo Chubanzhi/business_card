@@ -1,0 +1,90 @@
+/* pages/services/services.wxss */
+.container {
+  padding: 32rpx;
+  padding-bottom: 120rpx;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.service-card {
+  padding: 40rpx;
+  transition: transform 0.2s;
+}
+
+.service-card:active {
+  transform: scale(0.98);
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32rpx;
+}
+
+.service-icon {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 20rpx;
+  margin-right: 24rpx;
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon-text {
+  font-size: 56rpx;
+}
+
+.service-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-name {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 12rpx;
+}
+
+.service-desc {
+  font-size: 24rpx;
+  color: var(--text-sub);
+  line-height: 1.5;
+}
+
+.service-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 32rpx;
+  border-top: 1rpx solid var(--border-color);
+}
+
+.service-price {
+  font-size: 28rpx;
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.book-btn {
+  background-color: var(--primary-blue);
+  color: #fff;
+  border-radius: 50rpx;
+  padding: 20rpx 40rpx;
+  font-size: 26rpx;
+  font-weight: 500;
+  margin: 0;
+  box-shadow: var(--shadow-blue);
+}
+
+.book-btn:active {
+  transform: scale(0.95);
+}
