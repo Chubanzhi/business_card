@@ -27,12 +27,9 @@ Page({
   // 加载轮播图
   loadBannerImages() {
     // TODO: 从服务器获取轮播图数据
+    // 暂时不显示轮播图，等有实际图片后再启用
     this.setData({
-      bannerImages: [
-        { id: 1, url: '/images/banner1.jpg' },
-        { id: 2, url: '/images/banner2.jpg' },
-        { id: 3, url: '/images/banner3.jpg' }
-      ]
+      bannerImages: []
     })
   },
 
@@ -49,10 +46,10 @@ Page({
     // TODO: 从服务器获取服务项目数据
     this.setData({
       services: [
-        { id: 1, name: '新车销售', icon: '/images/service1.png' },
-        { id: 2, name: '维修保养', icon: '/images/service2.png' },
-        { id: 3, name: '二手车', icon: '/images/service3.png' },
-        { id: 4, name: '保险服务', icon: '/images/service4.png' }
+        { id: 1, name: '新车销售', icon: '🚗' },
+        { id: 2, name: '维修保养', icon: '🔧' },
+        { id: 3, name: '二手车', icon: '🔄' },
+        { id: 4, name: '保险服务', icon: '🛡️' }
       ]
     })
   },

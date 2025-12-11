@@ -29,6 +29,34 @@ App({
       longitude: null,  // 请替换为实际店铺经度（例如：116.4074）
       businessHours: '09:00-18:00',
       wechat: 'wechat_number'
+    },
+    // 员工信息
+    staffInfo: null,
+    isStaffLogin: false,
+    // 员工名片信息（C端展示）
+    staffCard: {
+      avatar: '',
+      name: '销售顾问',
+      phone: '',
+      wechat: '',
+      brand: 'XX品牌',
+      shop: 'XX汽车4S店',
+      position: '高级销售顾问',
+      years: 5,
+      tags: ['试驾体验控', '成交效率王'],
+      highlights: ['专业服务', '诚信经营'],
+      motto: '用心服务每一位客户',
+      honors: []
+    },
+    // 线索数据
+    leads: [],
+    // 数据埋点
+    analytics: {
+      pv: 0,
+      uv: 0,
+      shareCount: 0,
+      leadCount: 0,
+      callCount: 0
     }
   }
 })

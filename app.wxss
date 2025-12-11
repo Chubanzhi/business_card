@@ -1,55 +1,197 @@
 /**app.wxss**/
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
+/* --- CSS 变量定义 --- */
+page {
+  --primary-blue: #3b82f6;
+  --gradient-start: #2563eb;
+  --gradient-end: #60a5fa;
+  --bg-color: #f3f4f6;
+  --card-bg: #ffffff;
+  --text-main: #1f2937;
+  --text-sub: #6b7280;
+  --text-light: #9ca3af;
+  --border-color: #e5e7eb;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-blue: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+}
+
+/* --- 全局样式 --- */
+page {
+  background-color: var(--bg-color);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 28rpx;
+  color: var(--text-main);
   box-sizing: border-box;
 }
 
-/* 全局样式 */
-page {
-  background-color: #f5f5f5;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  font-size: 28rpx;
-  color: #333;
+/* 为所有 view 元素设置 box-sizing */
+view, text, button, input, textarea, picker, scroll-view, swiper, swiper-item, image {
+  box-sizing: border-box;
 }
 
-/* 通用按钮样式 */
+/* --- 移动端优先容器 --- */
+.container {
+  width: 100%;
+  padding: 32rpx;
+  padding-bottom: 120rpx; /* 为底部 tabBar 留出空间 */
+  min-height: 100vh;
+}
+
+/* --- 通用卡片样式 --- */
+.card {
+  background: var(--card-bg);
+  border-radius: 32rpx;
+  padding: 40rpx;
+  margin-bottom: 32rpx;
+  box-shadow: var(--shadow-md);
+}
+
+.card-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 24rpx;
+  display: flex;
+  align-items: center;
+}
+
+.card-subtitle {
+  font-size: 24rpx;
+  color: var(--text-sub);
+  margin-top: 8rpx;
+  line-height: 1.6;
+}
+
+/* --- Banner 卡片样式 --- */
+.banner-card {
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  color: white;
+  border-radius: 32rpx;
+  padding: 48rpx 40rpx;
+  margin-bottom: 32rpx;
+  box-shadow: var(--shadow-blue);
+}
+
+.banner-title {
+  font-size: 36rpx;
+  font-weight: 600;
+  margin-bottom: 16rpx;
+}
+
+.banner-desc {
+  font-size: 24rpx;
+  opacity: 0.9;
+  margin-bottom: 32rpx;
+  line-height: 1.6;
+}
+
+/* --- 标签样式 --- */
+.tag {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--primary-blue);
+  font-size: 22rpx;
+  padding: 8rpx 24rpx;
+  border-radius: 40rpx;
+  font-weight: 500;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20rpx;
+}
+
+/* --- 按钮样式 --- */
 .btn-primary {
-  background-color: #007AFF;
-  color: #fff;
-  border-radius: 8rpx;
-  padding: 24rpx 48rpx;
+  width: 100%;
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  padding: 28rpx;
+  border-radius: 50rpx;
   font-size: 30rpx;
+  font-weight: 600;
+  box-shadow: var(--shadow-blue);
+  transition: transform 0.1s;
 }
 
 .btn-primary:active {
-  background-color: #0051D5;
+  transform: scale(0.98);
 }
 
-/* 通用卡片样式 */
-.card {
-  background-color: #fff;
-  border-radius: 16rpx;
-  padding: 30rpx;
-  margin: 20rpx;
-  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+.btn-secondary {
+  width: 100%;
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  border: 2rpx solid var(--border-color);
+  padding: 28rpx;
+  border-radius: 50rpx;
+  font-size: 30rpx;
+  font-weight: 500;
 }
 
-/* 通用标题样式 */
+.btn-secondary:active {
+  background-color: var(--bg-color);
+}
+
+/* --- 通用标题样式 --- */
 .title {
   font-size: 36rpx;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 20rpx;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 32rpx;
 }
 
 .subtitle {
-  font-size: 30rpx;
-  color: #666;
-  margin-bottom: 16rpx;
+  font-size: 28rpx;
+  color: var(--text-sub);
+  margin-bottom: 24rpx;
+  line-height: 1.6;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 24rpx;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24rpx;
+}
+
+.more-link {
+  font-size: 26rpx;
+  color: var(--primary-blue);
+  font-weight: 500;
+}
+
+/* --- 空状态样式 --- */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120rpx 40rpx;
+  text-align: center;
+}
+
+.empty-text {
+  font-size: 28rpx;
+  color: var(--text-light);
+  margin-top: 24rpx;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120rpx 0;
+  font-size: 28rpx;
+  color: var(--text-sub);
 }
 

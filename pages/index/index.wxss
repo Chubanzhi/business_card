@@ -1,11 +1,15 @@
 /* pages/index/index.wxss */
 .container {
-  padding-bottom: 40rpx;
+  padding: 0;
+  padding-bottom: 120rpx;
 }
 
+/* --- 轮播图 --- */
 .banner {
   width: 100%;
   height: 400rpx;
+  border-radius: 0 0 32rpx 32rpx;
+  overflow: hidden;
 }
 
 .banner-image {
@@ -13,21 +17,51 @@
   height: 100%;
 }
 
+.banner-placeholder {
+  width: 100%;
+  height: 400rpx;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  border-radius: 0 0 32rpx 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-placeholder-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 28rpx;
+}
+
+/* --- 店铺信息卡片 --- */
 .shop-card {
-  margin: 30rpx;
+  margin: 32rpx;
+  margin-top: -20rpx;
+  position: relative;
+  z-index: 1;
 }
 
 .shop-header {
   display: flex;
   align-items: center;
-  margin-bottom: 30rpx;
+  margin-bottom: 32rpx;
 }
 
 .shop-logo {
   width: 120rpx;
   height: 120rpx;
-  border-radius: 16rpx;
+  border-radius: 24rpx;
   margin-right: 24rpx;
+  box-shadow: var(--shadow-md);
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop-logo-text {
+  font-size: 48rpx;
+  color: #fff;
+  font-weight: 600;
 }
 
 .shop-info {
@@ -38,14 +72,14 @@
 
 .shop-name {
   font-size: 36rpx;
-  font-weight: bold;
-  color: #333;
+  font-weight: 600;
+  color: var(--text-main);
   margin-bottom: 12rpx;
 }
 
 .shop-hours {
-  font-size: 26rpx;
-  color: #999;
+  font-size: 24rpx;
+  color: var(--text-sub);
 }
 
 .shop-actions {
@@ -55,22 +89,22 @@
 
 .action-btn {
   flex: 1;
-  background-color: #007AFF;
+  background-color: var(--primary-blue);
   color: #fff;
-  border-radius: 8rpx;
-  font-size: 28rpx;
-  padding: 20rpx 0;
+  border-radius: 50rpx;
+  font-size: 26rpx;
+  padding: 24rpx 0;
+  font-weight: 500;
+  box-shadow: var(--shadow-blue);
 }
 
+.action-btn:active {
+  transform: scale(0.98);
+}
+
+/* --- 服务项目区域 --- */
 .services-section {
-  margin: 30rpx;
-}
-
-.section-title {
-  font-size: 32rpx;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 24rpx;
+  margin: 0 32rpx 32rpx;
 }
 
 .services-grid {
@@ -83,91 +117,143 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20rpx;
-  background-color: #fff;
-  border-radius: 12rpx;
+  padding: 24rpx 16rpx;
+  background-color: var(--card-bg);
+  border-radius: 24rpx;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s;
+}
+
+.service-item:active {
+  transform: scale(0.95);
 }
 
 .service-icon {
   width: 80rpx;
   height: 80rpx;
-  margin-bottom: 12rpx;
+  margin-bottom: 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  border-radius: 20rpx;
+}
+
+.service-icon-text {
+  font-size: 48rpx;
 }
 
 .service-name {
-  font-size: 24rpx;
-  color: #666;
+  font-size: 22rpx;
+  color: var(--text-main);
+  font-weight: 500;
+  text-align: center;
 }
 
-.cars-section,
-.activities-section {
-  margin: 30rpx;
+/* --- 热门车型区域 --- */
+.cars-section {
+  margin: 0 32rpx 32rpx;
 }
 
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24rpx;
-}
-
-.more-link {
-  font-size: 26rpx;
-  color: #007AFF;
-}
-
-.cars-scroll {
-  white-space: nowrap;
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24rpx;
 }
 
 .car-item {
-  display: inline-block;
-  width: 300rpx;
-  margin-right: 20rpx;
-  background-color: #fff;
-  border-radius: 12rpx;
+  background-color: var(--card-bg);
+  border-radius: 24rpx;
   overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s;
+}
+
+.car-item:active {
+  transform: scale(0.98);
 }
 
 .car-image {
   width: 100%;
-  height: 200rpx;
+  height: 300rpx;
+  background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+}
+
+.car-info {
+  padding: 24rpx;
 }
 
 .car-name {
-  display: block;
   font-size: 28rpx;
-  color: #333;
-  margin: 16rpx;
+  color: var(--text-main);
+  font-weight: 600;
+  margin-bottom: 12rpx;
+  display: block;
 }
 
 .car-price {
-  display: block;
   font-size: 26rpx;
-  color: #FF6B35;
-  margin: 0 16rpx 16rpx;
+  color: #ef4444;
+  font-weight: 600;
+  display: block;
+}
+
+/* --- 横向滚动车型 --- */
+.cars-scroll {
+  white-space: nowrap;
+  padding-bottom: 10rpx;
+}
+
+.car-item-scroll {
+  display: inline-block;
+  width: 300rpx;
+  margin-right: 24rpx;
+  background-color: var(--card-bg);
+  border-radius: 24rpx;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  vertical-align: top;
+}
+
+.car-item-scroll .car-image {
+  width: 100%;
+  height: 200rpx;
+}
+
+.car-item-scroll .car-info {
+  padding: 20rpx;
+}
+
+/* --- 优惠活动区域 --- */
+.activities-section {
+  margin: 0 32rpx 32rpx;
 }
 
 .activities-list {
   display: flex;
   flex-direction: column;
-  gap: 20rpx;
+  gap: 24rpx;
 }
 
 .activity-item {
   display: flex;
   padding: 0;
   overflow: hidden;
+  border-radius: 24rpx;
+  box-shadow: var(--shadow-md);
+  background-color: var(--card-bg);
 }
 
 .activity-image {
-  width: 200rpx;
-  height: 150rpx;
+  width: 240rpx;
+  height: 180rpx;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
 }
 
 .activity-content {
   flex: 1;
-  padding: 20rpx;
+  padding: 24rpx;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -175,13 +261,15 @@
 
 .activity-title {
   font-size: 30rpx;
-  font-weight: bold;
-  color: #333;
+  font-weight: 600;
+  color: var(--text-main);
   margin-bottom: 12rpx;
+  display: block;
 }
 
 .activity-desc {
   font-size: 24rpx;
-  color: #999;
+  color: var(--text-sub);
+  line-height: 1.5;
+  display: block;
 }
-

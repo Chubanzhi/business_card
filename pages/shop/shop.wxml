@@ -1,7 +1,9 @@
 <!--pages/shop/shop.wxml-->
 <view class="container">
   <view class="shop-header card">
-    <image class="shop-logo-large" src="/images/logo.png" mode="aspectFit" />
+    <view class="shop-logo-large">
+      <text class="shop-logo-large-text">{{shopInfo.name.charAt(0)}}</text>
+    </view>
     <text class="shop-name-large">{{shopInfo.name}}</text>
   </view>
 

@@ -9,7 +9,20 @@
     "pages/booking/booking",
     "pages/booking-list/booking-list",
     "pages/profile/profile",
-    "pages/contact/contact"
+    "pages/contact/contact",
+    "pages/staff/login",
+    "pages/staff/workbench",
+    "pages/staff/edit-profile",
+    "pages/staff/leads",
+    "pages/staff/lead-detail",
+    "pages/marketing/tools",
+    "pages/marketing/referral",
+    "pages/marketing/used-cars",
+    "pages/marketing/gift",
+    "pages/after-sale/index",
+    "pages/after-sale/delivery-photos",
+    "pages/after-sale/maintenance",
+    "pages/after-sale/rights"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -26,27 +39,19 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "images/home.png",
-        "selectedIconPath": "images/home-active.png"
+        "text": "首页"
       },
       {
         "pagePath": "pages/cars/cars",
-        "text": "车型",
-        "iconPath": "images/car.png",
-        "selectedIconPath": "images/car-active.png"
+        "text": "车型"
       },
       {
         "pagePath": "pages/services/services",
-        "text": "服务",
-        "iconPath": "images/service.png",
-        "selectedIconPath": "images/service-active.png"
+        "text": "服务"
       },
       {
         "pagePath": "pages/profile/profile",
-        "text": "我的",
-        "iconPath": "images/profile.png",
-        "selectedIconPath": "images/profile-active.png"
+        "text": "我的"
       }
     ]
   },
