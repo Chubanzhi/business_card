@@ -1,0 +1,21 @@
+<!--pages/cars/cars.wxml-->
+<view class="container">
+  <view class="cars-list" wx:if="{{!loading && cars.length > 0}}">
+    <view class="car-card card" wx:for="{{cars}}" wx:key="id" data-id="{{item.id}}" bindtap="viewCarDetail">
+      <image class="car-image" src="{{item.image}}" mode="aspectFill" />
+      <view class="car-info">
+        <text class="car-name">{{item.name}}</text>
+        <text class="car-price">¥{{item.price}}万起</text>
+      </view>
+    </view>
+  </view>
+  
+  <view class="empty-state" wx:if="{{!loading && cars.length === 0}}">
+    <text class="empty-text">暂无车型数据</text>
+  </view>
+  
+  <view class="loading" wx:if="{{loading}}">
+    <text>加载中...</text>
+  </view>
+</view>
+
