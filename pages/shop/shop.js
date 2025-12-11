@@ -42,11 +42,25 @@ Page({
 
   // 打开地图导航
   openLocation() {
+    const { latitude, longitude, name, address } = this.data.shopInfo
+    
+    // 检查坐标是否已配置
+    if (latitude === null || longitude === null || latitude === 0 || longitude === 0) {
+      wx.showModal({
+        title: '提示',
+        content: '店铺坐标未配置，无法使用导航功能。请联系开发者配置店铺坐标。',
+        showCancel: false,
+        confirmText: '知道了'
+      })
+      console.error('店铺坐标未配置，请在 app.js 中设置 shopInfo.latitude 和 shopInfo.longitude')
+      return
+    }
+    
     wx.openLocation({
-      latitude: this.data.shopInfo.latitude,
-      longitude: this.data.shopInfo.longitude,
-      name: this.data.shopInfo.name,
-      address: this.data.shopInfo.address
+      latitude: latitude,
+      longitude: longitude,
+      name: name,
+      address: address
     })
   }
 })
