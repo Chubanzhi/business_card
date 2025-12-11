@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/shop/shop",
+    "pages/services/services",
+    "pages/cars/cars",
+    "pages/car-detail/car-detail",
+    "pages/activities/activities",
+    "pages/booking/booking",
+    "pages/booking-list/booking-list",
+    "pages/profile/profile",
+    "pages/contact/contact"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1a1a1a",
+    "navigationBarTitleText": "4S店名片",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f5f5f5"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#007AFF",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-active.png"
+      },
+      {
+        "pagePath": "pages/cars/cars",
+        "text": "车型",
+        "iconPath": "images/car.png",
+        "selectedIconPath": "images/car-active.png"
+      },
+      {
+        "pagePath": "pages/services/services",
+        "text": "服务",
+        "iconPath": "images/service.png",
+        "selectedIconPath": "images/service-active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "images/profile.png",
+        "selectedIconPath": "images/profile-active.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于展示店铺位置和导航"
+    }
+  },
+  "requiredPrivateInfos": [
+    "getLocation"
+  ],
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
+

@@ -1,0 +1,75 @@
+/* pages/shop/shop.wxss */
+.container {
+  padding: 30rpx;
+}
+
+.shop-header {
+  text-align: center;
+  padding: 40rpx 30rpx;
+}
+
+.shop-logo-large {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 20rpx;
+  margin-bottom: 24rpx;
+}
+
+.shop-name-large {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.info-section {
+  margin-top: 30rpx;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.info-value {
+  font-size: 28rpx;
+  color: #333;
+  flex: 1;
+  text-align: right;
+  margin-left: 20rpx;
+}
+
+.actions-section {
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.action-button {
+  width: 100%;
+  padding: 28rpx 0;
+  border-radius: 12rpx;
+  font-size: 30rpx;
+  background-color: #fff;
+  color: #333;
+  border: 1rpx solid #e0e0e0;
+}
+
+.action-button.primary {
+  background-color: #007AFF;
+  color: #fff;
+  border: none;
+}
+

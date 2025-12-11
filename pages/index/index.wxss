@@ -1,0 +1,187 @@
+/* pages/index/index.wxss */
+.container {
+  padding-bottom: 40rpx;
+}
+
+.banner {
+  width: 100%;
+  height: 400rpx;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+}
+
+.shop-card {
+  margin: 30rpx;
+}
+
+.shop-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.shop-logo {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 16rpx;
+  margin-right: 24rpx;
+}
+
+.shop-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-name {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 12rpx;
+}
+
+.shop-hours {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.shop-actions {
+  display: flex;
+  gap: 20rpx;
+}
+
+.action-btn {
+  flex: 1;
+  background-color: #007AFF;
+  color: #fff;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  padding: 20rpx 0;
+}
+
+.services-section {
+  margin: 30rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 24rpx;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20rpx;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx;
+  background-color: #fff;
+  border-radius: 12rpx;
+}
+
+.service-icon {
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 12rpx;
+}
+
+.service-name {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.cars-section,
+.activities-section {
+  margin: 30rpx;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24rpx;
+}
+
+.more-link {
+  font-size: 26rpx;
+  color: #007AFF;
+}
+
+.cars-scroll {
+  white-space: nowrap;
+}
+
+.car-item {
+  display: inline-block;
+  width: 300rpx;
+  margin-right: 20rpx;
+  background-color: #fff;
+  border-radius: 12rpx;
+  overflow: hidden;
+}
+
+.car-image {
+  width: 100%;
+  height: 200rpx;
+}
+
+.car-name {
+  display: block;
+  font-size: 28rpx;
+  color: #333;
+  margin: 16rpx;
+}
+
+.car-price {
+  display: block;
+  font-size: 26rpx;
+  color: #FF6B35;
+  margin: 0 16rpx 16rpx;
+}
+
+.activities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.activity-item {
+  display: flex;
+  padding: 0;
+  overflow: hidden;
+}
+
+.activity-image {
+  width: 200rpx;
+  height: 150rpx;
+}
+
+.activity-content {
+  flex: 1;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.activity-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 12rpx;
+}
+
+.activity-desc {
+  font-size: 24rpx;
+  color: #999;
+}
+

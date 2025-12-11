@@ -1,0 +1,68 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <!-- 轮播图 -->
+  <swiper class="banner" indicator-dots="{{true}}" autoplay="{{true}}" interval="{{3000}}" duration="{{500}}">
+    <swiper-item wx:for="{{bannerImages}}" wx:key="id">
+      <image src="{{item.url}}" class="banner-image" mode="aspectFill" />
+    </swiper-item>
+  </swiper>
+
+  <!-- 店铺信息卡片 -->
+  <view class="shop-card card">
+    <view class="shop-header">
+      <image class="shop-logo" src="/images/logo.png" mode="aspectFit" />
+      <view class="shop-info">
+        <text class="shop-name">{{shopInfo.name}}</text>
+        <text class="shop-hours">营业时间：{{shopInfo.businessHours}}</text>
+      </view>
+    </view>
+    <view class="shop-actions">
+      <button class="action-btn" bindtap="makePhoneCall">📞 拨打电话</button>
+      <button class="action-btn" bindtap="viewShopDetail">📍 查看详情</button>
+    </view>
+  </view>
+
+  <!-- 服务项目 -->
+  <view class="services-section">
+    <view class="section-title">服务项目</view>
+    <view class="services-grid">
+      <view class="service-item" wx:for="{{services}}" wx:key="id" bindtap="viewServices">
+        <image class="service-icon" src="{{item.icon}}" mode="aspectFit" />
+        <text class="service-name">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 热门车型 -->
+  <view class="cars-section" wx:if="{{hotCars.length > 0}}">
+    <view class="section-header">
+      <text class="section-title">热门车型</text>
+      <text class="more-link" bindtap="viewCars">更多 ></text>
+    </view>
+    <scroll-view class="cars-scroll" scroll-x="{{true}}">
+      <view class="car-item" wx:for="{{hotCars}}" wx:key="id">
+        <image class="car-image" src="{{item.image}}" mode="aspectFill" />
+        <text class="car-name">{{item.name}}</text>
+        <text class="car-price">¥{{item.price}}万起</text>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 优惠活动 -->
+  <view class="activities-section" wx:if="{{activities.length > 0}}">
+    <view class="section-header">
+      <text class="section-title">优惠活动</text>
+      <text class="more-link" bindtap="viewActivities">更多 ></text>
+    </view>
+    <view class="activities-list">
+      <view class="activity-item card" wx:for="{{activities}}" wx:key="id">
+        <image class="activity-image" src="{{item.image}}" mode="aspectFill" />
+        <view class="activity-content">
+          <text class="activity-title">{{item.title}}</text>
+          <text class="activity-desc">{{item.desc}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
