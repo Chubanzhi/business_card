@@ -1,0 +1,21 @@
+<!--pages/services/services.wxml-->
+<view class="container">
+  <view class="services-list">
+    <view class="service-card card" wx:for="{{services}}" wx:key="id" data-id="{{item.id}}" bindtap="viewServiceDetail">
+      <view class="service-header">
+        <view class="service-icon">
+          <text class="service-icon-text">{{item.icon}}</text>
+        </view>
+        <view class="service-info">
+          <text class="service-name">{{item.name}}</text>
+          <text class="service-desc">{{item.desc}}</text>
+        </view>
+      </view>
+      <view class="service-footer">
+        <text class="service-price">{{item.price}}</text>
+        <button class="book-btn" data-id="{{item.id}}" bindtap="bookService" catchtap="bookService">立即预约</button>
+      </view>
+    </view>
+  </view>
+</view>
+
